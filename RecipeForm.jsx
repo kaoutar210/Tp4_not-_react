@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 
 const categories = ["Entrée", "Plat", "Dessert", "Boisson"];
 
@@ -10,7 +10,7 @@ function RecipeForm  ({ onSubmit, onCancel, recipeToEdit })  {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
 
-  useEffect(() => {
+  useState(() => {
     if (recipeToEdit) {
       setName(recipeToEdit.name);
       setCategory(recipeToEdit.category);
@@ -120,3 +120,4 @@ const styles = {
 };
 
 export default RecipeForm;
+
