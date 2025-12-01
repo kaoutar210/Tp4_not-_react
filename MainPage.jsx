@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import RecipeList from "./RecipeList";
 import RecipeForm from "./RecipeForm";
 import RecipeFilter from "./RecipeFilter";
@@ -99,7 +99,7 @@ function MainPage  ()  {
     currentPage * recipesPerPage
   );
 
-  useEffect(() => {
+  useState(() => {
     setFilteredRecipes(recipes);
   }, [recipes]);
 
@@ -169,3 +169,4 @@ const styles = {
 };
 
 export default MainPage;
+
